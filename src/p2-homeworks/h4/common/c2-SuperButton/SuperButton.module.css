@@ -1,0 +1,24 @@
+.default {
+    margin-bottom: 5px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background: darkorange;
+}
+
+.default:hover {
+    background: chocolate;
+    cursor: pointer;
+}
+
+.default:disabled {
+    background: lightgrey;
+}
+
+.red {
+    background: red;
+    color: white;
+}
+.red:hover {
+     background: darkred;
+ }

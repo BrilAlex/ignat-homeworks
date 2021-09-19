@@ -1,0 +1,90 @@
+.message_wrap, .reply_wrap {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas: "avatar message";
+    column-gap: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.message_wrap {
+    grid-template-columns: 50px auto;
+    grid-template-areas: "avatar message";
+    justify-items: left;
+}
+
+.reply_wrap {
+    grid-template-columns: auto 50px;
+    grid-template-areas: "message avatar";
+    justify-items: right;
+}
+
+.message_avatar {
+    grid-area: avatar;
+    align-self: end;
+}
+
+.message_avatar img {
+    width: 50px;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+
+.message, .reply {
+    grid-area: message;
+    position: relative;
+    max-width: 320px;
+    padding: 10px 5px;
+    color: #fff;
+}
+
+.message:after, .reply:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+}
+
+.message {
+    background: #373737;
+    border-radius: 10px 10px 10px 0;
+}
+
+.message:after {
+    border-width: 0 0 12px 15px;
+    border-color: transparent transparent #373737 transparent;
+    top: 90%;
+    left: -15px;
+    margin-top: -4px;
+}
+
+.reply {
+    background: #00a495;
+    border-radius: 10px 10px 0 10px;
+}
+
+.reply:after {
+    border-width: 12px 0 0 15px;
+    border-color: transparent transparent transparent #00a495;
+    top: 90%;
+    right: -15px;
+    margin-top: -2px;
+}
+
+.message_sender {
+    margin: 0;
+    padding: 0 10px;
+    font-weight: bold;
+}
+.message_text {
+    margin: 0;
+    padding: 0 10px;
+}
+.message_time {
+    margin: 0;
+    padding: 0 10px;
+    text-align: right;
+    font-size: 12px;
+}
