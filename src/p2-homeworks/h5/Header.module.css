@@ -1,0 +1,39 @@
+.headerNav {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.headerNav .wrap {
+    position: absolute;
+    top: 5px;
+    left: -280px;
+    display: inline-block;
+    transition: left 1s ease-out 0.5s;
+}
+
+.headerNav .wrap:hover {
+    left: 0;
+}
+
+.headerNav a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #373737;
+    color: white;
+    text-decoration: none;
+}
+
+.headerNav a:hover {
+    text-decoration: underline;
+}
+
+.headerNav .activeItem {
+    background: #00a495;
+}
+
+.headerNav span {
+    display: inline-block;
+    padding: 10px 10px;
+    background: dimgrey;
+    color: white;
+}

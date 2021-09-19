@@ -7,6 +7,7 @@ import HW4 from '../../h4/HW4'
 function PreJunior() {
     return (
         <div>
+            <h1>Pre Junior page</h1>
             <HW1/>
             <HW2/>
             <HW3/>

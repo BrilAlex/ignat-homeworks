@@ -1,12 +1,13 @@
 import React from 'react'
 
-function Junior() {
+function JuniorPlus() {
     return (
         <div>
+            <h1>Junior Plus page</h1>
             {/*<HW7/>*/}
 
         </div>
     )
 }
 
-export default Junior
+export default JuniorPlus
