@@ -1,18 +1,15 @@
-.headerNav {
-    position: relative;
-    padding-bottom: 50px;
-}
+.headerNav {margin-top: 10px;}
 
 .headerNav .wrap {
-    position: absolute;
-    top: 5px;
-    left: -280px;
     display: inline-block;
-    transition: left 1s ease-out 0.5s;
+    transition-duration: 1000ms;
+    transition-delay: 0.5s;
+    transform: translate(-290px);
 }
 
 .headerNav .wrap:hover {
-    left: 0;
+    transition-duration: 500ms;
+    transform: translate(0);
 }
 
 .headerNav a {
