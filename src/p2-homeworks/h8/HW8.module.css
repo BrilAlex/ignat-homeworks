@@ -1,0 +1,8 @@
+.userTableRow {
+    max-width: 250px;
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    grid-template-areas: "name age";
+}
+.userTableName {grid-area: name;}
+.userTableAge {grid-area: age;}
