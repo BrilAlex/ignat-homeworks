@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/ignat-homeworks-ts-project/static/css/main.73e75293.chunk.css",
-    "main.js": "/ignat-homeworks-ts-project/static/js/main.1bbaa9d3.chunk.js",
-    "main.js.map": "/ignat-homeworks-ts-project/static/js/main.1bbaa9d3.chunk.js.map",
+    "main.css": "/ignat-homeworks-ts-project/static/css/main.ad092b78.chunk.css",
+    "main.js": "/ignat-homeworks-ts-project/static/js/main.52db3092.chunk.js",
+    "main.js.map": "/ignat-homeworks-ts-project/static/js/main.52db3092.chunk.js.map",
     "runtime-main.js": "/ignat-homeworks-ts-project/static/js/runtime-main.89fc013d.js",
     "runtime-main.js.map": "/ignat-homeworks-ts-project/static/js/runtime-main.89fc013d.js.map",
-    "static/js/2.f002afa9.chunk.js": "/ignat-homeworks-ts-project/static/js/2.f002afa9.chunk.js",
-    "static/js/2.f002afa9.chunk.js.map": "/ignat-homeworks-ts-project/static/js/2.f002afa9.chunk.js.map",
+    "static/js/2.06926a14.chunk.js": "/ignat-homeworks-ts-project/static/js/2.06926a14.chunk.js",
+    "static/js/2.06926a14.chunk.js.map": "/ignat-homeworks-ts-project/static/js/2.06926a14.chunk.js.map",
     "index.html": "/ignat-homeworks-ts-project/index.html",
-    "precache-manifest.41f689b4100e4469e1f56c347d5814f9.js": "/ignat-homeworks-ts-project/precache-manifest.41f689b4100e4469e1f56c347d5814f9.js",
+    "precache-manifest.c5b25fa54a8081e5a84b442cf96a3f0e.js": "/ignat-homeworks-ts-project/precache-manifest.c5b25fa54a8081e5a84b442cf96a3f0e.js",
     "service-worker.js": "/ignat-homeworks-ts-project/service-worker.js",
-    "static/css/main.73e75293.chunk.css.map": "/ignat-homeworks-ts-project/static/css/main.73e75293.chunk.css.map",
-    "static/js/2.f002afa9.chunk.js.LICENSE.txt": "/ignat-homeworks-ts-project/static/js/2.f002afa9.chunk.js.LICENSE.txt"
+    "static/css/main.ad092b78.chunk.css.map": "/ignat-homeworks-ts-project/static/css/main.ad092b78.chunk.css.map",
+    "static/js/2.06926a14.chunk.js.LICENSE.txt": "/ignat-homeworks-ts-project/static/js/2.06926a14.chunk.js.LICENSE.txt",
+    "static/media/preloader.gif": "/ignat-homeworks-ts-project/static/media/preloader.aabee301.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.89fc013d.js",
-    "static/js/2.f002afa9.chunk.js",
-    "static/css/main.73e75293.chunk.css",
-    "static/js/main.1bbaa9d3.chunk.js"
+    "static/js/2.06926a14.chunk.js",
+    "static/css/main.ad092b78.chunk.css",
+    "static/js/main.52db3092.chunk.js"
   ]
 }
