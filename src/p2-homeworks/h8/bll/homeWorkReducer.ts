@@ -14,15 +14,10 @@ export const homeWorkReducer = (state: Array<UserType>, action: ActionTypes): Ar
     switch (action.type) {
         case 'sort': {
             // fixed
-            if(action.payload === "up") {
-                 return state.map(s => ({...s})).sort(function (a, b) {
-                    return a.name > b.name ? 1 : ((a.name < b.name) ? -1 :  0);
-                });
-            } else {
-                return state.map(s => ({...s})).sort(function(a,b){
-                    return a.name < b.name ? 1 : ((a.name > b.name) ? -1 : 0);
-                });
-            }
+            const stateCopy = [...state].sort(function (a, b) {
+                return a.name > b.name ? 1 : ((a.name < b.name) ? -1 : 0);
+            });
+            return action.payload === "up" ? stateCopy : stateCopy.reverse();
         }
         case 'check': {
             // fixed

@@ -4,9 +4,8 @@ import styles from "./Clock.module.css";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>(new Date())
+    const [date, setDate] = useState<Date>()
     const [show, setShow] = useState<boolean>(false)
-    const [showTime, setShowTime] = useState<boolean>(false)
 
     const stop = () => {
         // stop
@@ -19,7 +18,6 @@ function Clock() {
             setDate(new Date());
         }, 1000)
         setTimerId(id);
-        setShowTime(true);
     }
 
     const onMouseEnter = () => {
@@ -31,10 +29,8 @@ function Clock() {
         setShow(false);
     }
 
-    let month = (date.getMonth() + 1) < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
-
-    const stringTime = date.toLocaleTimeString(); // fixed with date
-    const stringDate = `${date.getDate()}.${month}.${date.getFullYear()}` // fixed with date
+    const stringTime = date?.toLocaleTimeString(); // fixed with date
+    const stringDate = date?.toLocaleDateString(); // fixed with date
 
     return (
         <div className={styles.wrapper}>
@@ -42,7 +38,7 @@ function Clock() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                {showTime && stringTime}
+                {stringTime}
             </div>
 
 
