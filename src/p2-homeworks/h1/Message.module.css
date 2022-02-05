@@ -1,90 +1,74 @@
-.message_wrap, .reply_wrap {
+.message, .response {
     display: grid;
-    grid-template-columns: 50px auto;
-    grid-template-areas: "avatar message";
-    column-gap: 15px;
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-.message_wrap {
-    grid-template-columns: 50px auto;
-    grid-template-areas: "avatar message";
-    justify-items: left;
-}
-
-.reply_wrap {
-    grid-template-columns: auto 50px;
-    grid-template-areas: "message avatar";
-    justify-items: right;
-}
-
-.message_avatar {
-    grid-area: avatar;
-    align-self: end;
-}
-
-.message_avatar img {
-    width: 50px;
-    border: 1px solid #000;
-    border-radius: 25px;
-}
-
-.message, .reply {
-    grid-area: message;
-    position: relative;
-    max-width: 320px;
-    padding: 10px 5px;
-    color: #fff;
-}
-
-.message:after, .reply:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    z-index: 1;
-    border-style: solid;
+    grid-gap: 10px;
+    width: 320px;
+    padding: 10px;
 }
 
 .message {
-    background: #373737;
+    grid-template-columns: 70px auto;
+}
+
+.response {
+    grid-template-columns: auto 70px;
+}
+
+.avatar {
+    width: 70px;
+    border-radius: 35px;
+    align-self: end;
+}
+
+.content {
+    position: relative;
+    padding: 10px 15px 25px 15px;
+}
+
+.content::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background: transparent;
+}
+
+.message .content {
+    background: cadetblue;
     border-radius: 10px 10px 10px 0;
 }
 
-.message:after {
-    border-width: 0 0 12px 15px;
-    border-color: transparent transparent #373737 transparent;
-    top: 90%;
-    left: -15px;
-    margin-top: -4px;
-}
-
-.reply {
-    background: #00a495;
+.response .content {
+    background: cornflowerblue;
     border-radius: 10px 10px 0 10px;
 }
 
-.reply:after {
-    border-width: 12px 0 0 15px;
-    border-color: transparent transparent transparent #00a495;
-    top: 90%;
-    right: -15px;
-    margin-top: -2px;
+.message .content::after {
+    left: -30px;
+    bottom: 0;
+    border-bottom-right-radius: 15px;
+    box-shadow: 15px 0 0 0 cadetblue;
 }
 
-.message_sender {
-    margin: 0;
-    padding: 0 10px;
+.response .content::after {
+    right: -30px;
+    bottom: 0;
+    border-bottom-left-radius: 15px;
+    box-shadow: -15px 0 0 0 cornflowerblue;
+}
+
+.name {
+    margin: 0 0 5px 0;
     font-weight: bold;
 }
-.message_text {
+
+.messageText {
     margin: 0;
-    padding: 0 10px;
 }
-.message_time {
-    margin: 0;
-    padding: 0 10px;
-    text-align: right;
+
+.messageTime {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
     font-size: 12px;
 }

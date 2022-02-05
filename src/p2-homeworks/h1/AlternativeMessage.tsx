@@ -1,25 +1,28 @@
 import React from 'react';
-import s from "./Message.module.css";
+import styles from "./Message.module.css";
 
-type MessageProps = {
-    senderAvatar: string,
-    senderName: string,
-    messageText: string,
-    dispatchTime: string
+type MessagePropsType = {
+  messageData: {
+    avatar: string
+    name: string
+    message: string
+    time: string
+  }
+};
+
+function AlternativeMessage(props: MessagePropsType) {
+  const {avatar, name, message, time} = props.messageData;
+
+  return (
+    <div className={styles.response}>
+      <div className={styles.content}>
+        <p className={styles.name}>{name}</p>
+        <p className={styles.messageText}>{message}</p>
+        <span className={styles.messageTime}>{time}</span>
+      </div>
+      <img className={styles.avatar} src={avatar} alt={name}/>
+    </div>
+  )
 }
 
-export const AlternativeMessage = (props: MessageProps)  => {
-    return (
-        <div>
-            <div className={s.reply_wrap}>
-                <div className={s.message_avatar}>
-                    <img src={props.senderAvatar} alt={"Avatar"}/></div>
-                <div className={s.reply}>
-                    <p className={s.message_sender}>{props.senderName}</p>
-                    <p className={s.message_text}>{props.messageText}</p>
-                    <p className={s.message_time}>{props.dispatchTime}</p>
-                </div>
-            </div>
-        </div>
-    );
-}
+export default AlternativeMessage

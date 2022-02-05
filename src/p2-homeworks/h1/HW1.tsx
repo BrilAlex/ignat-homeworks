@@ -1,47 +1,42 @@
 import React from 'react'
 import Message from "./Message";
-import {AlternativeMessage} from "./AlternativeMessage";
+import AlternativeMessage from "./AlternativeMessage";
 
 const messageData = {
-    avatar: 'https://pbs.twimg.com/media/BwnUwfNIYAAvp-F.jpg',
-    name: 'Джоэл',
-    message: 'Типизировал state для соц. сети?',
-    time: '18:05'
+  avatar: "https://pbs.twimg.com/media/BwnUwfNIYAAvp-F.jpg",
+  name: 'Joel',
+  message: 'How it is going in the future?',
+  time: '12:03',
 }
 
-const replyData = {
-    avatar: 'https://pbs.twimg.com/media/EYqbdt0XkAANziO.jpg',
-    name: 'Шепард',
-    message: 'Еще нет, в процессе. Как раз занимаюсь этим вопросом.',
-    time: '18:33'
+const responseData = {
+  avatar: "https://pbs.twimg.com/media/EYqbdt0XkAANziO.jpg",
+  name: 'Commander Shepard',
+  message: 'Really cool! Fighting giant aliens, saving whole galaxy.',
+  time: '12:54',
 }
 
 function HW1() {
-    return (
-        <div>
-            <hr/>
-            homeworks 1
+  return (
+    <div>
+      <hr/>
+      homeworks 1
 
-            {/*should work (должно работать)*/}
+      {/*should work (должно работать)*/}
 
-            <Message
-                avatar={messageData.avatar}
-                name={messageData.name}
-                message={messageData.message}
-                time={messageData.time}
-            />
+      <Message
+        avatar={messageData.avatar}
+        name={messageData.name}
+        message={messageData.message}
+        time={messageData.time}
+      />
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            <AlternativeMessage
-                senderAvatar={replyData.avatar}
-                senderName={replyData.name}
-                messageText={replyData.message}
-                dispatchTime={replyData.time}
-            />
-            <hr/>
-        </div>
-    )
+      <hr/>
+      {/*для личного творчества, могу проверить*/}
+      <AlternativeMessage messageData={responseData}/>
+      <hr/>
+    </div>
+  )
 }
 
 export default HW1
