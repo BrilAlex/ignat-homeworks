@@ -1,0 +1,23 @@
+.greetingContainer {
+    position: relative;
+    height: 45px;
+}
+
+.nameInput {
+    margin-right: 5px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorMessage {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: red;
+}
+
+.greetingContainer button {
+    margin-right: 10px;
+}
