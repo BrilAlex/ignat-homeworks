@@ -1,39 +1,33 @@
-.message, .response {
-    display: grid;
-    grid-gap: 10px;
-    width: 320px;
-    padding: 10px;
-}
-
 .message {
-    grid-template-columns: 70px auto;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px;
 }
 
-.response {
-    grid-template-columns: auto 70px;
+.message.response {
+    justify-content: end;
 }
 
 .avatar {
     width: 70px;
-    border-radius: 35px;
-    align-self: end;
+    border-radius: 50%;
+}
+
+.angle {
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0, transparent 15px, cadetblue 0);
+}
+
+.response .angle {
+    background: radial-gradient(circle at 15px 0, transparent 15px, cornflowerblue 0);
 }
 
 .content {
-    position: relative;
-    padding: 10px 15px 25px 15px;
+    padding: 10px;
 }
 
-.content::after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 15px;
-    background: transparent;
-}
-
-.message .content {
+.content {
     background: cadetblue;
     border-radius: 10px 10px 10px 0;
 }
@@ -43,32 +37,21 @@
     border-radius: 10px 10px 0 10px;
 }
 
-.message .content::after {
-    left: -30px;
-    bottom: 0;
-    border-bottom-right-radius: 15px;
-    box-shadow: 15px 0 0 0 cadetblue;
-}
-
-.response .content::after {
-    right: -30px;
-    bottom: 0;
-    border-bottom-left-radius: 15px;
-    box-shadow: -15px 0 0 0 cornflowerblue;
-}
-
 .name {
     margin: 0 0 5px 0;
+    font-size: 17px;
     font-weight: bold;
 }
 
-.messageText {
+.text {
     margin: 0;
+    min-width: 150px;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
-.messageTime {
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
+.time {
+    margin: 0;
     font-size: 12px;
+    text-align: right;
 }

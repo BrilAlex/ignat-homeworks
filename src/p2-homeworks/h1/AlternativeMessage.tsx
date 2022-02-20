@@ -14,12 +14,15 @@ function AlternativeMessage(props: MessagePropsType) {
   const {avatar, name, message, time} = props.messageData;
 
   return (
-    <div className={styles.response}>
+    <div className={`${styles.message} ${styles.response}`}>
       <div className={styles.content}>
         <p className={styles.name}>{name}</p>
-        <p className={styles.messageText}>{message}</p>
-        <span className={styles.messageTime}>{time}</span>
+        <p className={styles.text}>{message}</p>
+        <p className={styles.time}>{time}</p>
       </div>
+
+      <div className={styles.angle}/>
+
       <img className={styles.avatar} src={avatar} alt={name}/>
     </div>
   )
