@@ -1,11 +1,52 @@
 .affair {
-    display: grid;
-    grid-template-columns: 150px 100px 30px;
-}
-.affairName {
-    padding: 5px;
+    display: flex;
+    max-width: 350px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
 }
 
-.affairPriority {
-    padding: 5px;
+.item {
+    margin: 10px 5px;
+}
+
+.name {
+    width: 150px;
+}
+
+.priority {
+    width: 100px;
+}
+
+.high {
+    color: red;
+}
+
+.middle {
+    color: orange;
+}
+
+.low {
+    color: green;
+}
+
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button.active {
+    background: darkgrey;
+}
+
+.filterButton {
+    width: 70px;
+    margin: 0 0 10px 10px;
+}
+
+.deleteButton {
+    display: inline-block;
+    width: 50px;
+    background: red;
+    color: white;
 }

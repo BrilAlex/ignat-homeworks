@@ -13,12 +13,16 @@ function Affair(props: AffairPropsType) {
     props.deleteAffairCallback(props.affair._id);
   }// fixed
 
+  const nameStyles = `${styles.item} ${styles.name}`;
+  const priorityStyles = `${styles.item} ${styles.priority} ${styles[props.affair.priority]}`;
+  const deleteButtonStyles = `${styles.item} ${styles.button} ${styles.deleteButton}`;
+
   return (
     <div className={styles.affair}>
-      <div className={styles.affairName}>{props.affair.name}</div>
-      <div className={styles.affairPriority}>{props.affair.priority}</div>
+      <div className={nameStyles}>{props.affair.name}</div>
+      <div className={priorityStyles}>{props.affair.priority}</div>
 
-      <button className={styles.deleteAffairButton} onClick={deleteCallback}>X</button>
+      <button className={deleteButtonStyles} onClick={deleteCallback}>X</button>
     </div>
   )
 }
