@@ -1,10 +1,21 @@
 .greetingContainer {
-    position: relative;
-    height: 45px;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
 }
 
 .nameInput {
     margin-right: 5px;
+    padding: 5px;
+    background: #f6f6f6;
+    border: 1px solid #9f9f9f;
+    border-radius: 5px;
+    outline: none;
+}
+
+.superInput:focus {
+    background: white;
+    box-shadow: 0 0 10px #9f9f9f;
 }
 
 .error {
@@ -12,12 +23,19 @@
 }
 
 .errorMessage {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    display: block;
+    height: 25px;
     color: red;
 }
 
-.greetingContainer button {
+.addButton {
     margin-right: 10px;
+    padding: 6px 15px;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+}
+
+.addButton:disabled {
+    background: lightgray;
 }

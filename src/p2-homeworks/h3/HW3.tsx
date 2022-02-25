@@ -10,10 +10,10 @@ export type UserType = {
 
 // уровень работы с глобальными данными
 function HW3() {
-  const [users, setUsers] = useState<Array<UserType>>([]); // any fixed
+  const [users, setUsers] = useState<UserType[]>([]); // any fixed
 
   const addUserCallback = (name: string) => { // any fixed
-    setUsers([{_id: v1(), name}, ...users]); // fixed
+    setUsers([...users, {_id: v1(), name}]); // fixed
   };
 
   return (
