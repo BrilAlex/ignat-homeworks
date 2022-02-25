@@ -1,0 +1,24 @@
+.default {
+    margin: 5px 10px;
+    padding: 5px 15px;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+}
+
+.default:hover {
+    background: darkorange;
+}
+
+.default:disabled {
+    background: lightgray;
+}
+
+.red {
+    background: red;
+    color: white;
+}
+
+.red:hover {
+    background: firebrick;
+}
