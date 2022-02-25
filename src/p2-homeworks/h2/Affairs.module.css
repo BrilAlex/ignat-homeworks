@@ -1,7 +1,7 @@
 .affair {
     display: flex;
     max-width: 350px;
-    margin-bottom: 5px;
+    margin: 0 10px 5px 10px;
     border-bottom: 1px solid black;
 }
 
