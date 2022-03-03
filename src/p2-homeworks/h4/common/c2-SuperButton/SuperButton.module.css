@@ -4,6 +4,7 @@
     background: orange;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .default:hover {
@@ -12,6 +13,7 @@
 
 .default:disabled {
     background: lightgray;
+    cursor: auto;
 }
 
 .red {
