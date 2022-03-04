@@ -1,3 +1,24 @@
-.App {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font: inherit;
+    text-decoration: none;
+}
 
+header, main, footer, article, aside, hgroup, menu, nav, section, details, figcaption, figure {
+    display: block;
+}
+
+.App {
+    padding: 5px 10px;
+}
+
+.App hr {
+    margin: 5px 0;
+    border: 1px solid #6c6c6c;
 }
