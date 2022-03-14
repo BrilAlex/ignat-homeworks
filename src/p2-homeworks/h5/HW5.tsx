@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import AppRoutes from "./AppRoutes";
+import Pages from "./Pages";
 import {HashRouter} from "react-router-dom";
 
 function HW5() {
@@ -9,7 +9,7 @@ function HW5() {
       {/*в gh-pages лучше работает HashRouter*/}
       <HashRouter>
         <Header/>
-        <AppRoutes/>
+        <Pages/>
       </HashRouter>
     </div>
   );

@@ -1,0 +1,15 @@
+.error404Page {
+    text-align: center;
+}
+
+.error404Page h1 {
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.error404Page .pageContent p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
