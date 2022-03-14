@@ -1,0 +1,6 @@
+.editableSpan {
+    display: inline-block;
+    margin: 7px 0;
+    padding: 5px 25px 5px 5px;
+    background: url("./img/pencil-icon.png") no-repeat center right;
+}
