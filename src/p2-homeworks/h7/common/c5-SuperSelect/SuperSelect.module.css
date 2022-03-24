@@ -1,6 +1,17 @@
 .superSelect {
     margin-bottom: 10px;
     padding: 5px;
+    background: #f6f6f6;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.superSelect:focus {
+    background: white;
+    box-shadow: 0 0 10px #9f9f9f;
+    outline: none;
+}
+
+.option:checked {
+    background: darkorange;
 }
