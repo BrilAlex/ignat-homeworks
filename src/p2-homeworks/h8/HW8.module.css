@@ -1,14 +1,9 @@
 .row {
     display: flex;
-    width: 350px;
+    justify-content: space-between;
+    width: 320px;
 }
 
-.name {
-    width: 80%;
-    padding: 5px 10px;
-}
-
-.age {
-    width: 20%;
-    padding: 5px 10px;
+.item {
+    padding: 5px 15px;
 }

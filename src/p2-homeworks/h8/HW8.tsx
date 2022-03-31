@@ -9,7 +9,7 @@ export type UserType = {
   age: number
 };
 
-const initialPeople = [
+const initialPeople: UserType[] = [
   {_id: 0, name: "Кот", age: 3},
   {_id: 1, name: "Александр", age: 66},
   {_id: 2, name: "Коля", age: 16},
@@ -24,8 +24,8 @@ function HW8() {
   // any fixed
   const finalPeople = people.map((p: UserType) => (
     <div key={p._id} className={s.row}>
-      <p className={s.name}>{p.name}</p>
-      <p className={s.age}>{p.age}</p>
+      <p className={s.item}>{p.name}</p>
+      <p className={s.item}>{p.age}</p>
     </div>
   ));
 
