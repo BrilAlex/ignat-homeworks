@@ -4,8 +4,7 @@ import s from "./Clock.module.css";
 
 function Clock() {
   const [timerId, setTimerId] = useState<number>(0);
-  const [date, setDate] = useState<Date>(new Date());
-  const [showTime, setShowTime] = useState<boolean>(false);
+  const [date, setDate] = useState<Date>();
   const [show, setShow] = useState<boolean>(false);
 
   const stop = () => {
@@ -13,29 +12,26 @@ function Clock() {
   };
   const start = () => {
     stop();
-    const id: number = window.setInterval(() => {
+    const id: number = +setInterval(() => {
       setDate(new Date()); // setDate
     }, 1000);
     setTimerId(id);
-    setShowTime(true);
   };
 
   const onMouseEnter = () => {
-    if (showTime) {
-      setShow(true); // show
-    }
+    setShow(true); // show
   };
   const onMouseLeave = () => {
     setShow(false); // close
   };
 
-  const stringTime = date.toLocaleTimeString(); // fixed with date
-  const stringDate = date.toLocaleDateString(); // fixed with date
+  const stringTime = date?.toLocaleTimeString() || <br/>; // fixed with date
+  const stringDate = date?.toLocaleDateString() || <br/>; // fixed with date
 
   return (
     <div className={s.clock}>
       <div className={s.clockItem} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        {showTime && stringTime}
+        {stringTime}
       </div>
 
       <div className={s.clockItem}>
