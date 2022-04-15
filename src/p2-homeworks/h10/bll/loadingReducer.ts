@@ -1,14 +1,13 @@
-type InitStateType = typeof initState;
-
 export type SetIsLoadingActionType = {
   type: "SET-IS-LOADING"
+  isLoading: boolean
 };
 
 const initState = {
   isLoading: false,
 };
 
-export const loadingReducer = (state = initState, action: SetIsLoadingActionType): InitStateType => { // any fixed
+export const loadingReducer = (state = initState, action: SetIsLoadingActionType): typeof initState => { // any fixed
   switch (action.type) {
     case "SET-IS-LOADING": {
       return {...state, isLoading: !state.isLoading};
@@ -18,4 +17,4 @@ export const loadingReducer = (state = initState, action: SetIsLoadingActionType
   }
 };
 
-export const toggleIsLoadingAC = (): SetIsLoadingActionType => ({type: "SET-IS-LOADING"}); // any fixed
+export const toggleIsLoadingAC = (isLoading: boolean): SetIsLoadingActionType => ({type: "SET-IS-LOADING", isLoading}); // any fixed

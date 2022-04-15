@@ -13,11 +13,14 @@ function HW10() {
   const dispatch = useDispatch<Dispatch<SetIsLoadingActionType>>();
 
   const setLoading = () => {
-    dispatch(toggleIsLoadingAC());
+    // dispatch
+    dispatch(toggleIsLoadingAC(true));
+
+    // setTimeout
     setTimeout(() => {
-      dispatch(toggleIsLoadingAC());
+      dispatch(toggleIsLoadingAC(false));
     }, 3000);
-    console.log('loading...');
+    // console.log('loading...');
   };
 
   return (
