@@ -1,0 +1,20 @@
+.rangeWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.rangeWrap span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.singleRangeWrap {
+    width: 240px;
+}
+
+.doubleRangeWrap {
+    width: 280px;
+}

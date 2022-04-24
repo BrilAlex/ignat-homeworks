@@ -1,0 +1,21 @@
+.range {
+    width: 200px;
+    height: 7px;
+    background: lightgrey;
+    border-radius: 3px;
+    outline: none;
+}
+
+.range:disabled::-moz-range-thumb,
+.range:disabled::-webkit-slider-thumb {
+    background: darkgrey;
+}
+
+.range::-moz-range-thumb,
+.range::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    background: orange;
+    border: none;
+    border-radius: 3px;
+}
