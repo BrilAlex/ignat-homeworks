@@ -44,13 +44,13 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
   }, [initMinValue, maxValue, disabled]);
 
   return (
-    <div className={s.slider}>
-      <div className={s.sliderTrack}/>
+    <div className={s.doubleRange}>
+      <div className={s.doubleRangeTrack}/>
       <input
         type={"range"}
         value={minValue}
         onChange={onMinValueChange}
-        className={`${s.thumb}`}
+        className={s.doubleRangeThumb}
         style={{zIndex: minValue === maxValue ? 1 : 0}}
         min={initMin}
         max={initMax}
@@ -61,7 +61,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         type={"range"}
         value={maxValue}
         onChange={onMaxValueChange}
-        className={`${s.thumb} ${s.thumbRight}`}
+        className={`${s.doubleRangeThumb} ${s.doubleRangeRightThumb}`}
         min={initMin}
         max={initMax}
         step={stepValue}

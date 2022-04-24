@@ -24,9 +24,6 @@ function HW11() {
           // сделать так чтоб value1 изменялось
           value={value1}
           onChangeRange={setValue1}
-          min={0}
-          max={100}
-          step={1}
         />
       </div>
 
@@ -36,9 +33,6 @@ function HW11() {
           // сделать так чтоб value1 и value2 изменялось
           value={[value1, value2]}
           onChangeRange={onDoubleRangeChange}
-          min={0}
-          max={100}
-          step={1}
         />
         <span>{value2}</span>
       </div>

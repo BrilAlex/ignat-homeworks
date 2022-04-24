@@ -1,3 +1,9 @@
+/* Removing default input appearance */
+.range, .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .range {
     width: 200px;
     height: 7px;
@@ -6,16 +12,30 @@
     outline: none;
 }
 
-.range:disabled::-moz-range-thumb,
-.range:disabled::-webkit-slider-thumb {
-    background: darkgrey;
-}
-
-.range::-moz-range-thumb,
-.range::-webkit-slider-thumb {
+/* For Firefox browsers */
+.range::-moz-range-thumb {
     width: 18px;
     height: 18px;
     background: orange;
     border: none;
     border-radius: 3px;
+}
+
+.range:disabled::-moz-range-thumb {
+    background: darkgrey;
+}
+
+/* For Chrome browsers */
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    width: 18px;
+    height: 18px;
+    background: orange;
+    border: none;
+    border-radius: 3px;
+}
+
+.range:disabled::-webkit-slider-thumb {
+    background: darkgrey;
 }

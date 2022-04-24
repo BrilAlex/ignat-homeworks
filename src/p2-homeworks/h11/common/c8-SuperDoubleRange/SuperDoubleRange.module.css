@@ -1,11 +1,11 @@
-.slider {
+.doubleRange {
     position: relative;
     display: inline-block;
     width: 200px;
     height: 9px;
 }
 
-.sliderTrack {
+.doubleRangeTrack {
     position: absolute;
     width: 100%;
     background: lightgrey;
@@ -14,13 +14,13 @@
 }
 
 /* Removing default input appearance */
-.thumb,
-.thumb::-webkit-slider-thumb {
+.doubleRangeThumb,
+.doubleRangeThumb::-webkit-slider-thumb {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
 }
 
-.thumb {
+.doubleRangeThumb {
     pointer-events: none;
     position: absolute;
     top: 4px;
@@ -29,9 +29,8 @@
     outline: none;
 }
 
-/* For Firefox and Chrome browsers */
-.thumb::-moz-range-thumb,
-.thumb::-webkit-slider-thumb {
+/* For Firefox browsers */
+.doubleRangeThumb::-moz-range-thumb {
     width: 18px;
     height: 18px;
     background: orange;
@@ -41,13 +40,31 @@
     cursor: pointer;
 }
 
-.thumb:disabled::-moz-range-thumb,
-.thumb:disabled::-webkit-slider-thumb {
+.doubleRangeRightThumb::-moz-range-thumb {
+    background: darkorange;
+}
+
+.doubleRangeThumb:disabled::-moz-range-thumb {
     background: darkgrey;
     cursor: auto;
 }
 
-.thumbRight::-moz-range-thumb,
-.thumbRight::-webkit-slider-thumb {
+/* For Chrome browsers */
+.doubleRangeThumb::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    background: orange;
+    border: none;
+    border-radius: 3px;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.doubleRangeRightThumb::-webkit-slider-thumb {
     background: darkorange;
+}
+
+.doubleRangeThumb:disabled::-webkit-slider-thumb {
+    background: darkgrey;
+    cursor: auto;
 }
