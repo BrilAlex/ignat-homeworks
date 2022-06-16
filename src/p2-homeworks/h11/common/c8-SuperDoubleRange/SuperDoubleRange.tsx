@@ -1,9 +1,17 @@
-import React, {ChangeEvent, useEffect, useState} from "react";
+import React, {
+  ChangeEvent,
+  DetailedHTMLProps,
+  InputHTMLAttributes,
+  useEffect,
+  useState
+} from "react";
 import s from "./SuperDoubleRange.module.css";
 
-type SuperDoubleRangePropsType = {
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
+
+type SuperDoubleRangePropsType = DefaultInputPropsType & {
   onChangeRange?: (value: [number, number]) => void
-  value?: [number, number]
+  rangeValues?: [number, number]
   min?: number
   max?: number
   step?: number
@@ -12,17 +20,17 @@ type SuperDoubleRangePropsType = {
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
   {
-    onChangeRange, value,
-    min, max, step,
-    disabled,
+    type, value, rangeValues, onChange, onChangeRange,
+    min, max, step, disabled,
+    ...restProps
   }
 ) => {
   // сделать самому, можно подключать библиотеки
   const initMin = min ? min : 0;
   const initMax = max ? max : 100;
   const stepValue = step ? step : 1;
-  const initMinValue = value ? value[0] : initMin;
-  const initMaxValue = value ? value[1] : initMax;
+  const initMinValue = rangeValues ? rangeValues[0] : initMin;
+  const initMaxValue = rangeValues ? rangeValues[1] : initMax;
 
   const [minValue, setMinValue] = useState(initMinValue);
   const [maxValue, setMaxValue] = useState(initMaxValue);
@@ -51,11 +59,12 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         value={minValue}
         onChange={onMinValueChange}
         className={s.doubleRangeThumb}
-        style={{zIndex: minValue === maxValue ? 1 : 0}}
+        style={{zIndex: minValue === maxValue && minValue !== 0 ? 1 : 0}}
         min={initMin}
         max={initMax}
         step={stepValue}
         disabled={disabled}
+        {...restProps}
       />
       <input
         type={"range"}
@@ -66,6 +75,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         max={initMax}
         step={stepValue}
         disabled={disabled}
+        {...restProps}
       />
     </div>
   );

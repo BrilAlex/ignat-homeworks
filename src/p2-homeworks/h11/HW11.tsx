@@ -31,7 +31,7 @@ function HW11() {
         <span>{value1}</span>
         <SuperDoubleRange
           // сделать так чтоб value1 и value2 изменялось
-          value={[value1, value2]}
+          rangeValues={[value1, value2]}
           onChangeRange={onDoubleRangeChange}
         />
         <span>{value2}</span>
